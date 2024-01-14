@@ -4,7 +4,7 @@ description: 'Meta description for the page'
 preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'about/'
 eleventyNavigation:
-    key: About Us
+    key: About
     order: 200
 ---
 
@@ -15,19 +15,24 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">About Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-
-    </section>
+<div id="banner-712">
+    <div class="cs-container">
+        <span class="cs-int-title">About</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg" alt="pills" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+                                
 
     <!-- ============================================ -->
     <!--                 Side By Side                 -->
@@ -50,23 +55,50 @@ eleventyNavigation:
             </div>
             <!-- Right Content Section-->
             <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
+                <span class="cs-topper">About Me</span>
+                <h2 class="cs-title">Running Waters Wellness</h2>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
+Hello! My name is Jeff Waters and I am an herbalist and wellness consultant. My job is to guide you
+toward the best version of you that you can be! Like most people, I am an on-the-go busy person with a
+9-to-5 and family to attend to, so finding time to focus on wellness can be challenging. My goal is to help as
+many people as possible find the time and resources they need to feel wellness in their lives. Whether I
+suggest herbal teas, yoga stretches, or specific foods to eat – I am here to provide ideas and knowledge
+that will support you and your needs.               
+ </p>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
+But…why me? Well, I am a molecular biologist who focuses on the general anatomy of an individual, on
+top of the biochemical components that make up a person. In short – I have experience looking at things
+both in the broad, whole-system and the narrow, focused areas. My coursework has included traditional
+herbalism and evidence-based herbalism, looking at both how people have utilized plants and their
+compounds to better an individual.</p>
+               <strong> <p class="">What do I do for you?</p></strong>
+                <ul class="cs-text">
+                    <li>Come up with a wellness plan to help get you started on your wellness journey.</li>
+                    <li>Utilize holistic approaches to ensure all aspects and needs are met for you.</li>
+                    <li>Provide resources that will help keep you on track.</li>
+                    <li>Formulate teas and products tailored specifically to you and your needs.</li>
+                </ul>
+                <p class="cs-text">The practice I have developed over the years has been especially useful in getting me through hard
+times and putting me over the moon during the better times. A wellness practice is a way to take charge
+of what is going on for you and convert all energy – positive, negative, even neutral, stagnant energy –
+into something that can better your mind, your body, and your emotional well-being.
+So please – book a consultation today. I am reading to get the waters moving and the good energy
+flowing.</p>
                 <div class="cs-flex-group">
                     <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
+Looking forward to meeting you at our first consultation today!</p>
+                    <span class="cs-name">Jeff Waters</span>
+                    <span class="cs-job">Herbalist &#38; Wellness Instructor</span>
                     <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
                 </div>
-                <a href="/projects" class="cs-button-solid">Our Projects</a>
+                <a href="/consultations" class="cs-button-solid">Book a Consultation</a>
+                <p class="disclaimer">Disclaimer: I am an herbalist and not a medical professional. The information provided is for educational
+purposes and it is never intended to be a substitute for professional medical advice, diagnosis, or
+treatment. Seek your physician or other qualified health provider with questions you may have
+regarding a medical condition. The herbal remedies and suggestions mentioned are intended to
+promote general well-being. They are not intended to diagnose, treat, cure, or prevent any diseases.
+Individual results may vary, and you should consult with a healthcare professional before starting any
+new herbal regimen.</p>
             </div>
         </div>
     </section>

@@ -5,7 +5,7 @@ preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'blog/'
 eleventyNavigation:
     key: Blog
-    order: 500
+    order: 300
 ---
 
 {% extends "layouts/base.html" %}
@@ -16,23 +16,28 @@ eleventyNavigation:
 
 {% block body %}
     <!-- ============================================ -->
-    <!--                    LANDING                   -->
+    <!--                   Banner                     -->
     <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Blog</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+    <div id="banner-712">
+        <div class="cs-container">
+            <span class="cs-int-title">Blog</span>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg" alt="pills" width="1280" height="568" aria-hidden="true">
         </picture>
-    </section>
+    </div>
 
     <!-- ============================================ -->
     <!--              Main Blog Content               -->
     <!-- ============================================ -->
 
-    <div class="blog-container main-content-wrapper">
+    {# <div class="blog-container main-content-wrapper">
         <!--Main content -->
         <div class="main-content">
             <!-- ============================================ -->
@@ -79,10 +84,68 @@ eleventyNavigation:
                             <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
                         </div>
                     </article>
+                
+            {% endif %}
                 {%- endfor -%}
             {% endif %}
-        </div>
+        </div> #}
 
-        {% include 'components/featured-post.html' %}
-    </div>
-{% endblock %}
+    <!-- ============================================ -->
+    <!--                    Blog                      -->
+    <!-- ============================================ -->
+
+    <section id="blog-985">
+        <div class="cs-container">
+            <div class="cs-content">
+                <div class="cs-flex">
+                    <span class="cs-topper">My Blog Posts</span>
+                    <h2 class="cs-title">{{ post.data.title }}</h2>
+                </div>
+                {# <a href="" class="cs-button-solid">View All</a> #}
+            </div>
+            {% if collections.post | length == 0 %}
+                <h1>No Recent Posts</h1>
+            {% else %}
+                <ul class="cs-card-group">
+                    {%- for post in collections.post | reverse -%}
+                        <li class="cs-item">
+                            <picture class="cs-picture">
+                                <!--Mobile Image-->
+                                <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="413" height="480" decoding="async">
+                                <!--Tablet and above Image-->
+                            </picture>
+
+                            <div class="cs-info">
+                                <div class="article-group">
+                                    <div class="blog-authorGroup">
+                                        <picture class="blog-author-img">
+                                            <img
+                                    src="/assets/svgs/profile.svg"
+                                    alt="house"
+                                    width="32"
+                                    height="32"
+                                    decoding="async"/>
+                                        </picture>
+                                        <span class="blog-author">{{ post.data.author }}</span>
+                                        <span aria-hidden="true" class="blog-dot"></span>
+                                        <span class="cs-date">
+                                            {{ post.date | postDate }}
+                                        </span>
+                                        <h3 class="cs-h3">
+                                            {{ post.data.title }}</h3>
+                                        <span class="cs-desc">
+                                            {{ post.data.description | truncate(30, "...") }}
+                                        </span>
+                                        <a href="{{ post.url }}" class="cs-link">Read More</a>
+                                    </div>
+
+                                </li>
+                            {%- endfor -%}
+                        {% endif %}
+                    </ul>
+                </section>
+
+                {% include 'components/cta.html' %}
+                {# {% include 'components/featured-post.html' %} #}
+            </div>
+        {% endblock %}

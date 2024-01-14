@@ -1,15 +1,15 @@
-/* PAGE-SPECIFIC STYLES FOR THE BLOG AND ARTICLE PAGES */
+// /* PAGE-SPECIFIC STYLES FOR THE BLOG AND ARTICLE PAGES */
 
-/*-- -------------------------- -->
-<---        Core Styles         -->
-<--- -------------------------- -*/
+// /*-- -------------------------- -->
+// <---        Core Styles         -->
+// <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
+
     body,
     html,
     * {
-        font-size: 100%;
         margin: 0;
         box-sizing: border-box;
         padding: 0;
@@ -61,6 +61,7 @@
 
         &:hover {
             color: var(--headerColor);
+
             &:before {
                 opacity: 1;
             }
@@ -68,9 +69,9 @@
     }
 }
 
-/*-- -------------------------- -->
-<---           Header           -->
-<--- -------------------------- -*/
+// /*-- -------------------------- -->
+// <---           Header           -->
+// <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
@@ -82,15 +83,15 @@
             padding: clamp(100px, 14vw, 200px) 0 clamp(50px, 11vw, 100px);
         }
 
-        .blog-header {
-            font-size: clamp(24px, 4vw, 48px);
-            font-weight: 700;
-            line-height: 1.2em;
-            text-align: left;
-            width: 100%;
-            margin: 0;
-            color: #fff;
-        }
+        // .blog-header {
+        //     font-size: clamp(24px, 4vw, 48px);
+        //     font-weight: 700;
+        //     line-height: 1.2em;
+        //     text-align: left;
+        //     width: 100%;
+        //     margin: 0;
+        //     color: #fff;
+        // }
 
         .blog-bg {
             width: 100%;
@@ -122,108 +123,109 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                color: #fff;
             }
         }
     }
 }
 
-/*-- -------------------------- -->
-<---   Interior Page Header     -->
-<--- -------------------------- -*/
+// /*-- -------------------------- -->
+// <---   Interior Page Header     -->
+// <--- -------------------------- -*/
 
-/* Mobile */
-@media only screen and (min-width: 0em) {
-    #int-hero {
-        min-height: 30vh;
-        padding-top: (50/16rem);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 1;
+// /* Mobile */
+// @media only screen and (min-width: 0em) {
+//     #int-hero {
+//         min-height: 30vh;
+//         padding-top: (50/16rem);
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         position: relative;
+//         z-index: 1;
 
-        &:before {
-            content: "";
-            width: 100%;
-            height: 100%;
-            background: #000;
-            opacity: 0.7;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
+//         &:before {
+//             content: "";
+//             width: 100%;
+//             height: 100%;
+//             background: #000;
+//             opacity: 0.7;
+//             display: block;
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             z-index: -1;
+//         }
 
-        picture {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -2;
+//         picture {
+//             width: 100%;
+//             height: 100%;
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             z-index: -2;
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
+//             img {
+//                 width: 100%;
+//                 height: 100%;
+//                 object-fit: cover;
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//             }
+//         }
 
-        h1 {
-            font-size: (64/30rem);
-            text-align: center;
-            width: 96%;
-            max-width: (500/16rem);
-            margin: 0 auto;
-            margin-top: (70/16rem);
-            margin-bottom: (30/16rem);
-            color: #fff;
-            position: relative;
-        }
+//         h1 {
+//             font-size: (64/30rem);
+//             text-align: center;
+//             width: 96%;
+//             max-width: (500/16rem);
+//             margin: 0 auto;
+//             margin-top: (70/16rem);
+//             margin-bottom: (30/16rem);
+//             color: #fff;
+//             position: relative;
+//         }
 
-        p {
-            text-align: center;
-            width: 96%;
-            max-width: (400/16rem);
-            margin: auto;
-            margin-bottom: (30/16rem);
-            color: #fff;
-            display: block;
-        }
-    }
-}
+//         p {
+//             text-align: center;
+//             width: 96%;
+//             max-width: (400/16rem);
+//             margin: auto;
+//             margin-bottom: (30/16rem);
+//             color: #fff;
+//             display: block;
+//         }
+//     }
+// }
 
-/* Tablet */
-@media only screen and (min-width: 48em) {
-    #int-hero {
-        font-size: 100%;
+// /* Tablet */
+// @media only screen and (min-width: 48em) {
+//     #int-hero {
+//         font-size: 100%;
 
-        h1 {
-            font-size: (64/16rem);
-        }
-    }
-}
+//         h1 {
+//             font-size: (64/16rem);
+//         }
+//     }
+// }
 
-/* Small Desktop */
-@media only screen and (min-width: 64em) {
-    #int-hero {
-        font-size: inherit;
-        height: auto;
-        min-height: (300/16rem);
-        padding-top: (180/16rem);
-        background-attachment: fixed;
-        padding-block-end: (100/16rem);
-    }
-}
+// /* Small Desktop */
+// @media only screen and (min-width: 64em) {
+//     #int-hero {
+//         font-size: inherit;
+//         height: auto;
+//         min-height: (300/16rem);
+//         padding-top: (180/16rem);
+//         background-attachment: fixed;
+//         padding-block-end: (100/16rem);
+//     }
+// }
 
-/*-- -------------------------- -->
-<---        Main Content        -->
-<--- -------------------------- -*/
+// /*-- -------------------------- -->
+// <---        Main Content        -->
+// <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
@@ -285,6 +287,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                color: #fff;
             }
         }
 
@@ -301,6 +304,7 @@
             display: block;
             position: relative;
             overflow: hidden;
+            color: #fff;
 
             img {
                 width: 100%;
@@ -309,6 +313,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                color: #fff;
             }
         }
 
@@ -389,6 +394,7 @@
 
             &:hover {
                 color: var(--headerColor);
+
                 &:before {
                     opacity: 1;
                 }
@@ -410,6 +416,7 @@
 @media only screen and (min-width: 0em) {
     body.dark-mode {
         .recent-articles {
+
             .blog-h1,
             .blog-desc,
             .blog-author,
@@ -419,11 +426,13 @@
         }
 
         .blog-sidebar {
+
             .feature-h3,
             .feature-date,
             .blog-header {
                 color: #f7f7f7;
             }
+
             .blog-header {
                 &:after {
                     background: var(--primary);
@@ -432,6 +441,7 @@
         }
 
         .blog-article {
+
             .blog-h1,
             .blog-author,
             .blog-date {
@@ -439,6 +449,7 @@
             }
 
             #blog-content {
+
                 h1,
                 h2,
                 h3,
@@ -447,11 +458,13 @@
                 h6 {
                     color: #f7f7f7;
                 }
+
                 p,
                 li {
                     color: #f7f7f7;
                     opacity: 0.8;
                 }
+
                 a {
                     color: #9dafe5;
                 }
@@ -574,9 +587,9 @@
     }
 }
 
-/*-- -------------------------- -->
-<---        Blog Articles       -->
-<--- -------------------------- -*/
+// /*-- -------------------------- -->
+// <---        Blog Articles       -->
+// <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
@@ -584,6 +597,7 @@
         width: 100%;
         max-width: (795/16em);
         display: block;
+
         .blog-mainImage {
             width: 100%;
             height: clamp(200px, 30vw, 400px);
@@ -600,6 +614,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                color: #fff;
             }
         }
 
@@ -610,6 +625,7 @@
             display: block;
             position: relative;
             overflow: hidden;
+            color: #fff;
 
             img {
                 width: 100%;
@@ -618,6 +634,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                color: #fff;
             }
         }
 
@@ -726,6 +743,7 @@
                 margin: (16/16rem) 0;
                 border-radius: (8/16rem);
                 display: block;
+                color: #fff;
             }
         }
     }
@@ -758,7 +776,7 @@
         .cs-logo {
             /* 210px - 240px */
             width: clamp(13.125em, 8vw, 15em);
-            height: auto;
+            height: 100%;
             /* 28px - 44px */
             margin-bottom: clamp(1.75em, 4.17vw, 2.75em);
             display: block;
@@ -766,7 +784,8 @@
 
         .cs-logo-img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            color: #fff;
         }
 
         .cs-text {
@@ -788,6 +807,7 @@
         .cs-nav-li {
             line-height: 1.5em;
             list-style: none;
+
             &:last-of-type {
                 margin-bottom: 0;
             }
@@ -877,6 +897,7 @@
             width: auto;
             height: (13/16rem);
             display: block;
+            color: #fff;
         }
     }
 }
@@ -934,6 +955,305 @@
             right: auto;
             /* reset these positions */
             bottom: auto;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---            Blog            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #blog-985 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: (584/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            margin-bottom: (32/16rem);
+            max-width: 20ch;
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875em, 5.5vw, 3.5em);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (32/16rem);
+            background-color: var(--primary);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-button-solid {
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            /* 16px - 20px */
+            gap: 20px;
+            position: relative;
+            justify-content: space-between
+        }
+
+        .cs-item {
+            list-style: none;
+            width: calc((100% - 40px) / 3);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+
+                .cs-info {
+                    &:before {
+                        opacity: 1;
+                        background-color: var(--primary);
+                    }
+                }
+
+                .cs-picture {
+                    img {
+                        transform: scale(1.15);
+                        color: #fff;
+                    }
+                }
+
+                .cs-date {
+                    color: #fff;
+                }
+
+                .cs-icon {
+                    filter: brightness(150%);
+                }
+
+                .cs-link {
+                    color: #fff;
+                }
+            }
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: (480/16rem);
+            /* removed at tablet */
+            aspect-ratio: (328/480);
+            /* clips img tag from overflowing it on hover */
+            overflow: hidden;
+            display: block;
+            position: relative;
+            z-index: 1;
+            color: #fff;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
+                object-position: top;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: transform 0.9s;
+                color: #fff;
+            }
+        }
+
+        .cs-info {
+            width: 83%;
+            max-width: (420/16rem);
+            /* 16px - 24px */
+            padding: clamp(1rem, 2vw, 1.5rem);
+            /* prevents padding from affecting the height and width */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 10;
+
+            &:before {
+                /* background-color */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #1a1a1a;
+                opacity: 0.8;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition:
+                    background-color 0.3s,
+                    opacity 0.3s;
+            }
+        }
+
+        .blog-author {
+            color: #fff;
+        }
+
+        .cs-date {
+            font-size: (16/16rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0 0 (20/16rem) 0;
+            color: #bababa;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: (8/16rem);
+            transition: color 0.3s;
+        }
+
+        .cs-icon {
+            width: (20/16rem);
+            height: auto;
+            transition: filter 0.3s;
+        }
+
+        .cs-h3 {
+            font-size: (20/16rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0 0 (12/16rem) 0;
+            color: #fff;
+            display: block;
+        }
+
+        .cs-desc {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            margin: 0 0 (20/16rem) 0;
+            color: #f7f7f7;
+            display: block;
+        }
+
+        .cs-link {
+            font-size: (16/16rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            text-decoration: none;
+            width: auto;
+            margin: 0;
+            color: var(--primary);
+            display: inline-block;
+            position: relative;
+            transition: color 0.3s;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &:before {
+                /* underline */
+                content: "";
+                width: 100%;
+                height: 1px;
+                background: currentColor;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                transition: background-color 0.3s;
+            }
+        }
+    }
+}
+
+/* Tablet - 550px */
+@media only screen and (min-width: 34.375rem) {
+    #blog-985 {
+        .cs-content {
+            text-align: left;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: (48/16rem);
+        }
+
+        .cs-title {
+            margin: 0;
+        }
+
+        .cs-picture {
+            /* remove the aspect ratio so the height can be squished */
+            aspect-ratio: initial;
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #blog-985 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+
+        .cs-card-group {
+            flex-direction: row;
         }
     }
 }

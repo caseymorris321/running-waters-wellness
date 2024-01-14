@@ -9,6 +9,8 @@ const configServer = require("./src/config/server");
 
 const filterPostDate = require("./src/config/postDate");
 
+
+
 module.exports = function (eleventyConfig) {
     // EXTENSIONS - Recognising non-default languages as templates
     // Setting up CSS files to be recognised as a template language, and can be passed through eleventy. This allows our minifier to read CSS files and minify them
@@ -54,7 +56,11 @@ module.exports = function (eleventyConfig) {
     // FILTERS - Modify data in template files at build time
     // Converts dates from JSDate format (Fri Dec 02 18:00:00 GMT-0600) to a locale format. More info in docs - https://moment.github.io/luxon/api-docs/index.html#datetime
     eleventyConfig.addFilter("postDate", filterPostDate);
+
+    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
     // END FILTERS
+
+
 
     return {
         dir: {

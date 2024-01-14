@@ -1,13 +1,8 @@
-/* PAGE-SPECIFIC STYLES FOR THE BLOG AND ARTICLE PAGES */
-/*-- -------------------------- -->
-<---        Core Styles         -->
-<--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
   body,
   html,
   * {
-    font-size: 100%;
     margin: 0;
     box-sizing: border-box;
     padding: 0;
@@ -59,9 +54,6 @@
     opacity: 1;
   }
 }
-/*-- -------------------------- -->
-<---           Header           -->
-<--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
   #header {
@@ -70,15 +62,6 @@
   }
   #header .blog-container {
     padding: clamp(100px, 14vw, 200px) 0 clamp(50px, 11vw, 100px);
-  }
-  #header .blog-header {
-    font-size: clamp(24px, 4vw, 48px);
-    font-weight: 700;
-    line-height: 1.2em;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    color: #fff;
   }
   #header .blog-bg {
     width: 100%;
@@ -109,95 +92,9 @@
     position: absolute;
     top: 0;
     left: 0;
-  }
-}
-/*-- -------------------------- -->
-<---   Interior Page Header     -->
-<--- -------------------------- -*/
-/* Mobile */
-@media only screen and (min-width: 0em) {
-  #int-hero {
-    min-height: 30vh;
-    padding-top: 3.125rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-  #int-hero:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0.7;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  #int-hero picture {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
-  }
-  #int-hero picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #int-hero h1 {
-    font-size: 2.13333333rem;
-    text-align: center;
-    width: 96%;
-    max-width: 31.25rem;
-    margin: 0 auto;
-    margin-top: 4.375rem;
-    margin-bottom: 1.875rem;
     color: #fff;
-    position: relative;
-  }
-  #int-hero p {
-    text-align: center;
-    width: 96%;
-    max-width: 25rem;
-    margin: auto;
-    margin-bottom: 1.875rem;
-    color: #fff;
-    display: block;
   }
 }
-/* Tablet */
-@media only screen and (min-width: 48em) {
-  #int-hero {
-    font-size: 100%;
-  }
-  #int-hero h1 {
-    font-size: 4rem;
-  }
-}
-/* Small Desktop */
-@media only screen and (min-width: 64em) {
-  #int-hero {
-    font-size: inherit;
-    height: auto;
-    min-height: 18.75rem;
-    padding-top: 11.25rem;
-    background-attachment: fixed;
-    padding-block-end: 6.25rem;
-  }
-}
-/*-- -------------------------- -->
-<---        Main Content        -->
-<--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
   .blog-container {
@@ -253,6 +150,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    color: #fff;
   }
   .recent-articles .article-group {
     padding: clamp(30px, 5vw, 50px);
@@ -266,6 +164,7 @@
     display: block;
     position: relative;
     overflow: hidden;
+    color: #fff;
   }
   .recent-articles .blog-author-img img {
     width: 100%;
@@ -274,6 +173,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    color: #fff;
   }
   .recent-articles .blog-authorGroup {
     display: flex;
@@ -494,9 +394,6 @@
     max-width: 22.5em;
   }
 }
-/*-- -------------------------- -->
-<---        Blog Articles       -->
-<--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
   .blog-article {
@@ -520,6 +417,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    color: #fff;
   }
   .blog-article .blog-author-img {
     width: 2em;
@@ -528,6 +426,7 @@
     display: block;
     position: relative;
     overflow: hidden;
+    color: #fff;
   }
   .blog-article .blog-author-img img {
     width: 100%;
@@ -536,6 +435,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    color: #fff;
   }
   .blog-article .blog-authorGroup {
     display: flex;
@@ -631,6 +531,7 @@
     margin: 1rem 0;
     border-radius: 0.5rem;
     display: block;
+    color: #fff;
   }
 }
 /*-- -------------------------- -->
@@ -657,14 +558,15 @@
   #cs-footer .cs-logo {
     /* 210px - 240px */
     width: clamp(13.125em, 8vw, 15em);
-    height: auto;
+    height: 100%;
     /* 28px - 44px */
     margin-bottom: clamp(1.75em, 4.17vw, 2.75em);
     display: block;
   }
   #cs-footer .cs-logo-img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    color: #fff;
   }
   #cs-footer .cs-text {
     /* changes to 521px at desktop */
@@ -760,6 +662,7 @@
     width: auto;
     height: 0.8125rem;
     display: block;
+    color: #fff;
   }
 }
 /* Inbetween - 600px */
@@ -806,5 +709,258 @@
     right: auto;
     /* reset these positions */
     bottom: auto;
+  }
+}
+/*-- -------------------------- -->
+<---            Blog            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #blog-985 {
+    padding: var(--sectionPadding);
+  }
+  #blog-985 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #blog-985 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #blog-985 .cs-title {
+    margin-bottom: 2rem;
+    max-width: 20ch;
+  }
+  #blog-985 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 2rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #blog-985 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #blog-985 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #blog-985 .cs-button-solid {
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #blog-985 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* 16px - 20px */
+    gap: 20px;
+    position: relative;
+    justify-content: space-between;
+  }
+  #blog-985 .cs-item {
+    list-style: none;
+    width: calc((100% - 40px) / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+  }
+  #blog-985 .cs-item:hover {
+    cursor: pointer;
+  }
+  #blog-985 .cs-item:hover .cs-info:before {
+    opacity: 1;
+    background-color: var(--primary);
+  }
+  #blog-985 .cs-item:hover .cs-picture img {
+    transform: scale(1.15);
+    color: #fff;
+  }
+  #blog-985 .cs-item:hover .cs-date {
+    color: #fff;
+  }
+  #blog-985 .cs-item:hover .cs-icon {
+    filter: brightness(150%);
+  }
+  #blog-985 .cs-item:hover .cs-link {
+    color: #fff;
+  }
+  #blog-985 .cs-picture {
+    width: 100%;
+    height: 30rem;
+    /* removed at tablet */
+    aspect-ratio: 0.68333333;
+    /* clips img tag from overflowing it on hover */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+  #blog-985 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.9s;
+    color: #fff;
+  }
+  #blog-985 .cs-info {
+    width: 83%;
+    max-width: 26.25rem;
+    /* 16px - 24px */
+    padding: clamp(1rem, 2vw, 1.5rem);
+    /* prevents padding from affecting the height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
+  #blog-985 .cs-info:before {
+    /* background-color */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    opacity: 0.8;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+  #blog-985 .blog-author {
+    color: #fff;
+  }
+  #blog-985 .cs-date {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1.25rem 0;
+    color: #bababa;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+  }
+  #blog-985 .cs-icon {
+    width: 1.25rem;
+    height: auto;
+    transition: filter 0.3s;
+  }
+  #blog-985 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    color: #fff;
+    display: block;
+  }
+  #blog-985 .cs-desc {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0 0 1.25rem 0;
+    color: #f7f7f7;
+    display: block;
+  }
+  #blog-985 .cs-link {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    width: auto;
+    margin: 0;
+    color: var(--primary);
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s;
+  }
+  #blog-985 .cs-link:hover {
+    color: #fff;
+  }
+  #blog-985 .cs-link:before {
+    /* underline */
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.3s;
+  }
+}
+/* Tablet - 550px */
+@media only screen and (min-width: 34.375rem) {
+  #blog-985 .cs-content {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
+  }
+  #blog-985 .cs-title {
+    margin: 0;
+  }
+  #blog-985 .cs-picture {
+    /* remove the aspect ratio so the height can be squished */
+    aspect-ratio: initial;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #blog-985 .cs-container {
+    max-width: 80rem;
+  }
+  #blog-985 .cs-card-group {
+    flex-direction: row;
   }
 }

@@ -58,7 +58,7 @@
     bottom: 0;
   }
   #sbs .cs-right {
-    max-width: 33.875rem;
+    max-width: 38.875rem;
     margin: auto;
   }
   #sbs .cs-topper {
@@ -77,6 +77,12 @@
   }
   #sbs .cs-text:last-of-type {
     margin-bottom: 2rem;
+  }
+  #sbs .cs-text li {
+    margin-left: 10px;
+  }
+  #sbs .disclaimer {
+    margin-top: 3.125rem;
   }
   #sbs .cs-flex-group {
     /* 16px - 32px */

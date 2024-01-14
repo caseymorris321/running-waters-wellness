@@ -1,35 +1,38 @@
 ---
-title: 'Projects'
+title: 'Consultations'
 description: 'Meta description for the page'
 preloadImg: '/assets/images/cabinets2.jpg'
-permalink: 'projects/'
-eleventyNavigation:
-    key: Projects
-    order: 300
+permalink: 'consultations/'
+
 ---
+
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/projects.css">
+    <link rel="stylesheet" href="/assets/css/consultations.css">
 {% endblock %}
 
 {% block body %}
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<div id="banner-712">
+    <div class="cs-container">
+        <span class="cs-int-title">Consultations</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg" alt="pills" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
 
-    <section id="int-hero">
-        <h1 id="home-h">Our Projects</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-    </section>
-
-    <!-- ============================================ -->
+    {# <!-- ============================================ -->
     <!--                   Gallery                    -->
     <!-- ============================================ -->
 
@@ -97,8 +100,15 @@ eleventyNavigation:
             </div>
             <a href="/contact" class="cs-button-solid">Get Free Quote</a>
         </div>
-    </section>
+    </section> #}
 
-    {% include 'components/cta.html' %}
+    <!-- Cal inline embed code begins -->
+    
+    <script defer type="text/javascript" src="/assets/js/consultations.js"></script>
+    <div id="my-cal-inline" class="cal-container"></div>
+
+    <!-- Cal inline embed code ends -->
+
+    {# {% include 'components/cta.html' %} #}
 
 {% endblock %}
