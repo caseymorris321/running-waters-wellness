@@ -92,7 +92,7 @@
     max-width: 80rem;
     margin: auto;
     padding: clamp(1rem, 3vw, 2rem);
-    background-color: #f7f7f7;
+    background-color: var(--primaryLight);
     border-radius: 1rem;
     position: relative;
   }
@@ -115,7 +115,7 @@
   #sbs .cs-job {
     font-size: 0.875rem;
     line-height: 1.5em;
-    color: var(--primary);
+    color: var(--bodyTextColor);
     display: block;
   }
   #sbs .cs-quote-icon {
