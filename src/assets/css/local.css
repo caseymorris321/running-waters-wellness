@@ -115,7 +115,7 @@
   #sbs .cs-job {
     font-size: 0.875rem;
     line-height: 1.5em;
-    color: var(--bodyTextColor);
+    color: #000;
     display: block;
   }
   #sbs .cs-quote-icon {
