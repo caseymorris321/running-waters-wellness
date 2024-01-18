@@ -5,10 +5,3 @@
 [[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts
   package = "@netlify/plugin-lighthouse"
-
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-
-  [plugins.inputs]
-  # Cloudinary cloud name
-  cloudName = "dqyhfbad0"
