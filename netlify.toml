@@ -11,5 +11,4 @@
 
   [plugins.inputs]
   cloudName = "dqyhfbad0"
-  loadingStrategy = "none"
   maxSize = { width = 1200, height = 800, dpr = 2.0 }
