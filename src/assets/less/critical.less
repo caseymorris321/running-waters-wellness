@@ -1,176 +1,67 @@
 /*-- -------------------------- -->
-<---            Hero            -->
+<---          Banner            -->
 <--- -------------------------- -*/
-
-/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #hero-856 {
-        /* centers button */
-        text-align: center;
-        /* 116px - 164px top */
-        /* 60px - 100px  bottom */
-        padding: clamp(7.25rem, 16.82vw, 10.25rem) (16/16rem) clamp(3.75rem, 7.82vw, 6.25rem);
-        background-color: #DAEAF5;
-        /* clips the svg wave from overflowing */
-        overflow: hidden;
+    #banner-home {
+        /* 175px - 200px top */
+    
         position: relative;
         z-index: 1;
+    }
 
-        .cs-container {
-            width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: (48/16rem);
-        }
+    .cs-background-home {
 
-        .cs-content {
-            max-width: (630/16rem);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .cs-topper {
-            font-size: (16/16rem);
-            line-height: 1.2em;
-            text-transform: uppercase;
-            text-align: inherit;
-            letter-spacing: 0.1em;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: (4/16rem);
-            display: block;
-        }
-
-        .cs-title {
-            /* 39px - 61px */
-            font-size: clamp(2.4375rem, 5vw, 3.8125rem);
-            font-weight: 900;
-            line-height: 1.2em;
-            text-align: center;
-            /* 23 characters including spaces wide */
-            max-width: 23ch;
-            margin: 0 0 (16/16rem) 0;
-            color: var(--headerColor);
-            position: relative;
-        }
-
-        .cs-text {
-            /* 16px - 20px */
-            font-size: clamp(1rem, 1.5vw, 1.25rem);
-            line-height: 1.5em;
-            text-align: center;
-            width: 100%;
-            max-width: (531/16rem);
-            /* 28px - 40px */
-            margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
-            color: var(--bodyTextColor);
-        }
+        
+        max-width: 100vw;
+        /* 400px - 712px */
+        height: 100vh;
+        /* 100px - 200px */
+        overflow: hidden;
+        /* clips the img tag corners */
+   
+        display: block;
+        position: relative;
 
 
-
-        .cs-picture {
-            width: 100%;
-            max-width: (570/16rem);
-            /* 400px - 712px */
-            height: clamp(25rem, 95vw, 44.5rem);
-            /* 100px - 200px */
-            border-radius: 0 clamp(6.25rem, 17vw, 12.5rem) 0 clamp(6.25rem, 17vw, 12.5rem);
-            box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.16);
-            /* clips the img tag corners */
-            overflow: hidden;
-            display: block;
-            position: relative;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                /* makes image act as a background image */
-                object-fit: cover;
-                /* ensures the top of the images is at the top of the container, no heads getting cut off */
-                object-position: top;
-            }
-        }
-
-        .cs-wave {
-            /* we're stretching the svg wider than the viewport so it's taller and has more of a presence */
-            width: 320%;
-            height: auto;
-            display: block;
+        img {
             position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            z-index: -1;
-        }
-    }
-}
-
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #hero-856 {
-        text-align: left;
-
-        .cs-container {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .cs-content {
-            width: 40vw;
-            /* prevents flex-box from squishing it */
-            flex: none;
-            align-items: flex-start;
-            /* sends it to the right in the 2nd position */
-            order: 2;
-        }
-
-        .cs-title,
-        .cs-text {
-            text-align: left;
-        }
-
-        .cs-picture {
-            /* 623px - 814px */
-            height: clamp(38.9375rem, 60vw, 50.875rem);
-        }
-
-        .cs-wave {
-            width: 100%;
+            display: block;
+            top: 0;
             left: 0;
-            /* flips it horizontally */
-            transform: scaleX(-1);
+            height: 100%;
+            width: 100%;
+            /* makes image act as a background image */
+            object-fit: cover;
+            /* ensures the top of the images is at the top of the container, no heads getting cut off */
+            object-position: top;
+
+
+
+            /* Makes img tag act as a background image */
+
         }
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #hero-856 {
-            background-color: rgba(0, 0, 0, 0.2);
+.scroll-arrow {
+    position: absolute;
+    bottom: 10px;
+    /* Adjust the distance from the bottom as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    /* Adjust the width of the arrow */
+    height: 50px;
+    /* Adjust the height of the arrow */
+    background-image: url('/assets/svgs/down-arrow.svg');
 
-            .cs-title,
-            .h1-second-color,
-            .cs-text,
-            .cs-number,
-            .cs-desc {
-                color: var(--bodyTextColorWhite);
-            }
+    /* Replace with your arrow image */
+    background-size: cover;
+    cursor: pointer;
+    z-index: 1;
 
-            .cs-wave {
-                path {
-                    fill: var(--dark);
-                }
-            }
-        }
-    }
 }
+
+
+
+

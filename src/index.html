@@ -7,7 +7,7 @@ eleventyNavigation:
   key: Home
   order: 100
 ---
-
+  scroll-behavior: smooth;
 {% extends "layouts/base.html" %}
 
 {% block head %}
@@ -31,214 +31,148 @@ eleventyNavigation:
                 });
         }
     </script>
+
 {% endblock %}
 
 {% block body %}
+
     <!-- ============================================ -->
-    <!--                    Hero                      -->
+    <!--                   Banner                     -->
     <!-- ============================================ -->
 
-    <section id="hero-856">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Wellness in Motion</span>
-                <h1 class="cs-title">Journey to Wellness, <br><span class="h1-second-color">Guided by Waters</span></h1>
-                <p class="cs-text">
+    <div id="banner-home">
+        <!--Background Image-->
+        <picture class="cs-background-home">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/index/flowers.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="/assets/images/index/flowers.jpg">
+            <img loading="lazy" decoding="async" src="/assets/images/index/flowers.jpg" alt="pills" aria-hidden="true">
+        </picture>
+        <a href="#sbs" class="scroll-arrow"></a>
+    </div>
 
-Hey lovely souls! It's Jeff here, ready to help you reach your wellness goals. From mind to body, let's craft a personalized plan together. Book a consultation today and let's embark on this amazing journey toward your best self!   </p>
-                <a href="/consultations" class="cs-button-solid">Book a Consultation</a>
-            </div>
-            <!--Hero Image-->
-            <picture class="cs-picture">
-                <!--Mobile-->
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg">
-                <!--Tablet-->
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg">
-                <!--Desktop-->
-                <source media="(min-width: 1024px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg">
-                <img aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Ftherapy.jpg" alt="therapy" width="570" height="701">
-            </picture>
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs">
+        <h2 class="cs-topper">ABOUT ME</h2>
+        <div class="cs-flex-group">
+            {# <p class="cs-flex-p">
+Looking forward to meeting you at our first consultation today!</p> #}
+            <span class="cs-name">Jeff Waters</span>
+            <span class="cs-job">Wellness Consultant</span>
+            <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote-white.svg" alt="gavel" width="136" height="77">
         </div>
-        <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
-        <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="#f7f7f7" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
-        </svg>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Steps                      -->
-    <!-- ============================================ -->
-
-    <section id="steps-889">
         <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">The Process</span>
-                <h2 class="cs-title">How It Works</h2>
-                <p class="cs-text">
-                Initial consultation is free and easy. Are you ready to take the next step in meeting your wellness goals today?
-            </p>
-            </div>
-            <ul class="cs-card-group">
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" src="/assets/images/Icons_icon-orange.svg" alt="icon" width="32" height="32" loading="lazy" decoding="async" aria-hidden="true">
-                    </picture>
-                    <h3 class="cs-h3">Book a Consultation</h3>
-                    <p class="cs-item-p">
-                    Book a free 15 minute consultation.
-                </p>
-                </li>
-                <!--Arrow-->
-                <li class="cs-item cs-arrow" aria-hidden="true">
-                    <img class="cs-arrow-img" src="/assets/images/Icons_arrow-curve-right.svg" alt="icon" width="80" height="76" loading="lazy" decoding="async" aria-hidden="true">
-                </li>
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" src="/assets/images/Icons_icon-orange.svg" alt="icon" width="32" height="32" loading="lazy" decoding="async" aria-hidden="true">
-                    </picture>
-                    <h3 class="cs-h3">Meet With Me</h3>
-                    <p class="cs-item-p">
-                    Let's talk about your needs and how my wellness packages can help you.
-                </p>
-                </li>
-                <!--Arrow-->
-                <li class="cs-item cs-arrow" aria-hidden="true">
-                    <img class="cs-arrow-img" src="/assets/images/Icons_arrow-curve-right.svg" alt="icon" width="80" height="76" loading="lazy" decoding="async" aria-hidden="true">
-                </li>
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <img class="cs-icon" src="/assets/images/Icons_icon-orange.svg" alt="icon" width="32" height="32" loading="lazy" decoding="async" aria-hidden="true">
-                    </picture>
-                    <h3 class="cs-h3">Develop a Plan</h3>
-                    <p class="cs-item-p">
-                    I will work with you to create a personalized wellness plan depending on your wellness package.
-                </p>
-                </li>
-            </ul>
-            <a href="/consultations" class="cs-button-solid">Book a Consultation</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                 Why Choose Us                -->
-    <!-- ============================================ -->
-
-    <section id="why-choose-682">
-        <div class="cs-container">
-            <!-- Left Section -->
-            <div class="cs-image-group">
+            <!-- Left Image Section -->
+            <div class="cs-left">
                 <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fhealth1.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fhealth1.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fhealth1.jpg" alt="people outside" width="306" height="360">
+                    <source media="(max-width: 600px)" srcset="/assets/svgs/main-image.svg">
+                    <source media="(min-width: 601px)" srcset="/assets/svgs/main-image.svg">
+                    <img aria-hidden="true" decoding="async" src="/assets/svgs/main-image.svg" alt="cabinets" loading="lazy" >
+                    {# width="400" height="563" #}
                 </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth2.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth2.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth2.jpg" alt="people outside" width="306" height="360">
-                </picture>
-                <picture class="cs-picture cs-picture3">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth3.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth3.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth3.jpg" alt="person gardening" width="306" height="360">
-                </picture>
-                <picture class="cs-picture cs-picture4">
-                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth4.jpg">
-                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth4.jpg">
-                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth4.jpg" alt="urban environment in green" width="306" height="360">
-                </picture>
-                <!--Zig Zag Graphic-->
-                <img class="cs-graphic" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fzigzag.svg" loading="lazy" decoding="async" alt="zigzag" width="983" height="416">
+
             </div>
-            <div class="cs-content">
-                <span class="cs-topper">Why Choose Me</span>
-                <h2 class="cs-title">I Care About <span class="cs-color">Your Health</span> And Wellness</h2>
+            <!-- Right Content Section-->
+            <div class="cs-right">
+                {# <span class="cs-topper">About Me</span> #}
+
                 <p class="cs-text">
-                I combine traditional practices with scientific approach.
-            </p>
-                <ul class="cs-ul">
-                    <li class="cs-li">
-                        <h3 class="cs-h3">
-                            <img class="cs-icon" aria-hidden="true" src="/assets/images/Icons_squares.svg" loading="lazy" decoding="async" alt="squares" width="17" height="18">
-                        Experienced and Qualified
-                    </h3>
-                        <p class="cs-item-text">
-                        I am a Molecular Biologist with a minor in nutrition.
-                    </p>
-                    </li>
-                    <li class="cs-li">
-                        <h3 class="cs-h3">
-                            <img class="cs-icon" aria-hidden="true" src="assets/images/Icons_squares.svg" loading="lazy" decoding="async" alt="squares" width="17" height="18">
-                        Holistic Approach
-                    </h3>
-                        <p class="cs-item-text">
-                        I integrate physical, mental, and emotional aspects to address your overall well-being.
-                    </p>
-                    </li>
-                    <li class="cs-li">
-                        <h3 class="cs-h3">
-                            <img class="cs-icon" aria-hidden="true" src="/assets/images/Icons_squares.svg" loading="lazy" decoding="async" alt="squares" width="17" height="18">
-                        Customized Solutions
-                    </h3>
-                        <p class="cs-item-text">
-                        I create tailored plans to individual needs for personalized care.
-                    </p>
-                    </li>
+Hello! My name is Jeff Waters. My goal is to guide you
+toward the best version of you that you can be! Like most people, I am an on-the-go busy person with a
+9-to-5 and family to attend to, so finding time to focus on wellness can be challenging. My goal is to help as
+many people as possible find the time and resources they need to feel wellness in their lives. Whether I
+suggest herbal teas, yoga stretches, or specific foods to eat – I am here to provide ideas and knowledge
+that will support you and your needs.               
+ </p>
+                <p class="cs-text">
+But…why me? Well, I am a molecular biologist who focuses on the general anatomy of an individual, on
+top of the biochemical components that make up a person. In short – I have experience looking at things
+both in the broad, whole-system and the narrow, focused areas. My coursework has included traditional
+herbalism and evidence-based herbalism, looking at both how people have utilized plants and their
+compounds to better an individual.</p>
+                <strong>
+                    <p class="">What do I do for you?</p>
+                </strong>
+                <ul class="cs-text">
+                    <li>Come up with a wellness plan to help get you started on your wellness journey.</li>
+                    <li>Utilize holistic approaches to ensure all aspects and needs are met for you.</li>
+                    <li>Provide resources that will help keep you on track.</li>
+                    <li>Formulate teas and products tailored specifically to you and your needs.</li>
                 </ul>
-                <a class="cs-button-solid" href="about">More About Me</a>
+                <p class="cs-text">The practice I have developed over the years has been especially useful in getting me through hard
+times and putting me over the moon during the better times. A wellness practice is a way to take charge
+of what is going on for you and convert all energy – positive, negative, even neutral, stagnant energy –
+into something that can better your mind, your body, and your emotional well-being.
+So please – book a consultation today. I am reading to get the waters moving and the good energy
+flowing.</p>
+                <a href="/consultations" class="cs-button-solid">BOOK A CONSULTATION</a>
+               
             </div>
         </div>
     </section>
 
-      {% include 'components/featured-post.html' %}
-
-    {# <!-- ============================================ -->
-    <!--                   Stats                      -->
+    <!-- ============================================ -->
+    <!--                    Blog                      -->
     <!-- ============================================ -->
 
-    <!-- No headers, so no section tag -->
-    <div id="stats-316">
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/person-gold.svg" alt="icon" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
-                </picture>
-                <div class="cs-flex-group">
-                    <span class="cs-number">50+</span>
-                    <span class="cs-desc">Attorneys</span>
-                </div>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/group-gold.svg" alt="icon" width="40" height="35" loading="lazy" decoding="async" aria-hidden="true">
-                </picture>
-                <div class="cs-flex-group">
-                    <span class="cs-number">850+</span>
-                    <span class="cs-desc">Global Customers</span>
-                </div>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/award-gold.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
-                </picture>
-                <div class="cs-flex-group">
-                    <span class="cs-number">12</span>
-                    <span class="cs-desc">Winning Awards</span>
-                </div>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/check-gold.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
-                </picture>
-                <div class="cs-flex-group">
-                    <span class="cs-number">98%</span>
-                    <span class="cs-desc">Success Rate</span>
-                </div>
-            </li>
-        </ul>
-    </div> #}
+    
 
-  
+    <section id="blog-985">
+        <h2 class="cs-topper">BLOG POSTS</h2>
+        <div class="cs-container">
+            <div class="cs-content">
+                <div class="cs-flex">
+                    <h2 class="cs-title">{{ post.data.title }}</h2>
+                </div>
+                {# <a href="" class="cs-button-solid">View All</a> #}
+            </div>
+            {% if collections.post | length == 0 %}
+                <h1>No Recent Posts</h1>
+            {% else %}
+                <ul class="cs-card-group">
+                    {%- for post in collections.post | reverse -%}
+                        <li class="cs-item">
+                            <picture class="cs-picture">
+                                <!--Mobile Image-->
+                                <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="413" height="480" decoding="async">
+                                <!--Tablet and above Image-->
+                            </picture>
 
-    {% include 'components/cta.html' %}
-{% endblock %}
+                            <div class="cs-info">
+                                <div class="article-group">
+                                    <div class="blog-authorGroup">
+                                        <picture class="blog-author-img">
+                                            <img
+                                    src="/assets/svgs/profile.svg"
+                                    alt="house"
+                                    width="32"
+                                    height="32"
+                                    decoding="async"/>
+                                        </picture>
+                                        <span class="blog-author">{{ post.data.author }}</span>
+                                        <span aria-hidden="true" class="blog-dot"></span>
+                                        <span class="cs-date">
+                                            {{ post.date | postDate }}
+                                        </span>
+                                        <h3 class="cs-h3">
+                                            {{ post.data.title }}</h3>
+                                        <span class="cs-desc">
+                                            {{ post.data.description | truncate(30, "...") }}
+                                        </span>
+                                        <a href="{{ post.url }}" class="cs-link">Read More</a>
+                                    </div>
+
+                                </li>
+                            {%- endfor -%}
+                        {% endif %}
+                    </ul>
+                </section>
+
+                {# {% include 'components/featured-post.html' %} #}
+
+                {# {% include 'components/cta.html' %} #}
+            {% endblock %}

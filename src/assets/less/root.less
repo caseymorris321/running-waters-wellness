@@ -25,8 +25,9 @@
         --bodyFontSize: 1rem;
         /* 60px - 100px top and bottom */
         // --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-        --sectionPadding: clamp(3rem,  7.82vw, 0rem) 1rem;
-      
+        // --sectionPadding: clamp(3rem, 7.82vw, 0rem) 1rem;
+        --sectionPadding: clamp(5.75rem, 7.82vw, 6.25rem) 1rem;
+
     }
 
     .h1-second-color {
@@ -36,6 +37,8 @@
     body {
         margin: 0;
         padding: 0;
+        //   background-color: rgba(57, 181, 74, 0.1);
+        ;
     }
 
     *,
@@ -43,18 +46,21 @@
     *:after {
         /* prevents padding from affecting height and width */
         box-sizing: border-box;
+        scroll-behavior: smooth !important;
     }
 
     .cs-topper {
-        font-size: var(--topperFontSize);
+        // font-size: var(--topperFontSize);
         line-height: 1.2em;
         text-transform: uppercase;
         text-align: inherit;
         letter-spacing: .1em;
         font-weight: 700;
-        color: var(--primary);
+        color: var(--headerColor);
         margin-bottom: 0.25rem;
         display: block;
+        margin: auto;
+        text-align: center;
     }
 
     .cs-title {
@@ -64,7 +70,7 @@
         text-align: inherit;
         max-width: 43.75rem;
         margin: 0 0 1rem 0;
-        color: var(--headerColor);
+        color: var(--primary);
         position: relative;
     }
 
@@ -89,7 +95,8 @@
         font-weight: 700;
         min-width: (174/16rem);
         margin: 0;
-        color: #1a1a1a;
+        border-radius: 12px;
+        color: #ffffff;
         padding: 0 (24/16rem);
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
@@ -916,6 +923,8 @@
         position: fixed;
         z-index: 10000;
 
+
+
         .cs-container {
             width: 100%;
             max-width: (1280/16rem);
@@ -924,6 +933,7 @@
             justify-content: flex-end;
             align-items: center;
             gap: (24/16rem);
+            font-size: 36px;
         }
 
         .cs-toggle {
@@ -931,9 +941,11 @@
         }
 
         .cs-logo {
-            width: 18.4%;
+            width: 38.4%;
             max-width: (350/16rem);
-            height: 100%;
+            // height: 100%;
+            height: 150px;
+
             /* margin-right auto pushes everything away from it to the right */
             margin: 0 auto 0 0;
             padding: 0;
@@ -941,6 +953,7 @@
             justify-content: center;
             align-items: center;
             z-index: 100;
+            transition: width 0.3s;
 
             img {
                 width: 100%;
@@ -948,7 +961,15 @@
                 /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
             }
+
+
         }
+
+        .cs-logo.larger {
+            width: 18.4%;
+            height: 100%;
+        }
+
 
         .cs-ul {
             width: 100%;
@@ -970,13 +991,14 @@
 
         .cs-li-link {
             /* 14px - 16px */
-            font-size: clamp(0.875rem, 1vw, 1rem);
+            font-size: clamp(1.875rem, 1vw, 1rem);
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
             color: var(--bodyTextColor);
             display: block;
             position: relative;
+            transition: font-size 0.3s;
 
             &:hover {
                 &:before {
@@ -1003,6 +1025,10 @@
                 left: 0;
                 transition: width 0.3s;
             }
+        }
+
+        .cs-li-link.larger {
+            font-size: clamp(0.875rem, 1vw, 1rem);
         }
     }
 }
@@ -1051,7 +1077,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             flex-direction: column;
             gap: (16/16rem);
         }
@@ -1108,18 +1134,16 @@
     #banner-712 {
         .cs-background {
             &:before {
-                opacity: 1;
-                background: linear-gradient(
-                    90.01deg,
-                    rgba(0, 0, 0, 0.9) 16.86%,
-                    rgba(0, 0, 0, 0) 100%
-                );
+                opacity: 0.7;
+                background: linear-gradient(90.01deg,
+                        rgba(0, 0, 0, 0.9) 16.86%,
+                        rgba(0, 0, 0, 0) 100%);
             }
         }
     }
 }
 
-                                
+
 
 
 
@@ -1180,7 +1204,7 @@
                 transform: translateX(-50%);
             }
         }
-
+        .cs-topper,
         .cs-title,
         .cs-text {
             max-width: (500/16rem);
@@ -1216,6 +1240,7 @@
             /* prevents padding from adding to width and height */
             box-sizing: border-box;
             display: block;
+
             &::placeholder {
                 color: #767676;
             }
@@ -1224,6 +1249,7 @@
         .cs-button-solid {
             box-shadow: 4px 4px 0 0 #fff;
             transition: color .3s, box-shadow .3s, background-color .3s;
+
             &:hover {
                 color: #000;
                 background-color: #fff;
@@ -1283,7 +1309,7 @@
     }
 }
 
-                                
+
 
 /*-- -------------------------- -->
 <---           Footer           -->
@@ -1418,13 +1444,23 @@
         }
 
         .credit {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
             font-size: (16/16rem);
             line-height: (36/16rem);
             text-align: center;
-            width: 96%;
+            width: 100%;
+            max-width: (1350/16rem);
             margin: auto;
-            margin-top: (50/16rem);
+            text-align: center;
+            margin-top: (16/16rem);
             color: #fff;
+
+            p {
+                color: #fff;
+            }
 
             a {
                 font-size: (16/16rem);
@@ -1439,6 +1475,13 @@
             .copyright {
                 font-size: (16/16rem);
                 display: block;
+            }
+
+            .disclaimer {
+                text-align: left;
+                font-size: 12px;
+                color: #a0a0a0;
+               
             }
         }
     }
@@ -1529,11 +1572,7 @@
             }
         }
 
-        .credit {
-            .copyright {
-                display: inline-block;
-            }
-        }
+        
     }
 }
 

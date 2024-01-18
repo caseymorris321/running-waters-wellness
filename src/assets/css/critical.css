@@ -1,86 +1,25 @@
 /*-- -------------------------- -->
-<---            Hero            -->
+<---          Banner            -->
 <--- -------------------------- -*/
-/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #hero-856 {
-    /* centers button */
-    text-align: center;
-    /* 116px - 164px top */
-    /* 60px - 100px  bottom */
-    padding: clamp(7.25rem, 16.82vw, 10.25rem) 1rem clamp(3.75rem, 7.82vw, 6.25rem);
-    background-color: #DAEAF5;
-    /* clips the svg wave from overflowing */
-    overflow: hidden;
+  #banner-home {
+    /* 175px - 200px top */
     position: relative;
     z-index: 1;
   }
-  #hero-856 .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 3rem;
-  }
-  #hero-856 .cs-content {
-    max-width: 39.375rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  #hero-856 .cs-topper {
-    font-size: 1rem;
-    line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: inherit;
-    letter-spacing: 0.1em;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.25rem;
-    display: block;
-  }
-  #hero-856 .cs-title {
-    /* 39px - 61px */
-    font-size: clamp(2.4375rem, 5vw, 3.8125rem);
-    font-weight: 900;
-    line-height: 1.2em;
-    text-align: center;
-    /* 23 characters including spaces wide */
-    max-width: 23ch;
-    margin: 0 0 1rem 0;
-    color: var(--headerColor);
-    position: relative;
-  }
-  #hero-856 .cs-text {
-    /* 16px - 20px */
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    line-height: 1.5em;
-    text-align: center;
-    width: 100%;
-    max-width: 33.1875rem;
-    /* 28px - 40px */
-    margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
-    color: var(--bodyTextColor);
-  }
-  #hero-856 .cs-picture {
-    width: 100%;
-    max-width: 35.625rem;
+  .cs-background-home {
+    max-width: 100vw;
     /* 400px - 712px */
-    height: clamp(25rem, 95vw, 44.5rem);
+    height: 100vh;
     /* 100px - 200px */
-    border-radius: 0 clamp(6.25rem, 17vw, 12.5rem) 0 clamp(6.25rem, 17vw, 12.5rem);
-    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.16);
-    /* clips the img tag corners */
     overflow: hidden;
+    /* clips the img tag corners */
     display: block;
     position: relative;
   }
-  #hero-856 .cs-picture img {
+  .cs-background-home img {
     position: absolute;
+    display: block;
     top: 0;
     left: 0;
     height: 100%;
@@ -89,64 +28,22 @@
     object-fit: cover;
     /* ensures the top of the images is at the top of the container, no heads getting cut off */
     object-position: top;
-  }
-  #hero-856 .cs-wave {
-    /* we're stretching the svg wider than the viewport so it's taller and has more of a presence */
-    width: 320%;
-    height: auto;
-    display: block;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    z-index: -1;
+    /* Makes img tag act as a background image */
   }
 }
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  #hero-856 {
-    text-align: left;
-  }
-  #hero-856 .cs-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #hero-856 .cs-content {
-    width: 40vw;
-    /* prevents flex-box from squishing it */
-    flex: none;
-    align-items: flex-start;
-    /* sends it to the right in the 2nd position */
-    order: 2;
-  }
-  #hero-856 .cs-title,
-  #hero-856 .cs-text {
-    text-align: left;
-  }
-  #hero-856 .cs-picture {
-    /* 623px - 814px */
-    height: clamp(38.9375rem, 60vw, 50.875rem);
-  }
-  #hero-856 .cs-wave {
-    width: 100%;
-    left: 0;
-    /* flips it horizontally */
-    transform: scaleX(-1);
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #hero-856 {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  body.dark-mode #hero-856 .cs-title,
-  body.dark-mode #hero-856 .h1-second-color,
-  body.dark-mode #hero-856 .cs-text,
-  body.dark-mode #hero-856 .cs-number,
-  body.dark-mode #hero-856 .cs-desc {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #hero-856 .cs-wave path {
-    fill: var(--dark);
-  }
+.scroll-arrow {
+  position: absolute;
+  bottom: 10px;
+  /* Adjust the distance from the bottom as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  /* Adjust the width of the arrow */
+  height: 50px;
+  /* Adjust the height of the arrow */
+  background-image: url('/assets/svgs/down-arrow.svg');
+  /* Replace with your arrow image */
+  background-size: cover;
+  cursor: pointer;
+  z-index: 1;
 }

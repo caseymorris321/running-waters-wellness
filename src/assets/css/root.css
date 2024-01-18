@@ -20,7 +20,7 @@
     --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
     --bodyFontSize: 1rem;
     /* 60px - 100px top and bottom */
-    --sectionPadding: clamp(3rem, 7.82vw, 0rem) 1rem;
+    --sectionPadding: clamp(5.75rem, 7.82vw, 6.25rem) 1rem;
   }
   .h1-second-color {
     color: var(--headerSecondaryColor);
@@ -34,17 +34,19 @@
   *:after {
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
+    scroll-behavior: smooth !important;
   }
   .cs-topper {
-    font-size: var(--topperFontSize);
     line-height: 1.2em;
     text-transform: uppercase;
     text-align: inherit;
     letter-spacing: 0.1em;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--headerColor);
     margin-bottom: 0.25rem;
     display: block;
+    margin: auto;
+    text-align: center;
   }
   .cs-title {
     font-size: var(--headerFontSize);
@@ -53,7 +55,7 @@
     text-align: inherit;
     max-width: 43.75rem;
     margin: 0 0 1rem 0;
-    color: var(--headerColor);
+    color: var(--primary);
     position: relative;
   }
   .cs-text {
@@ -74,7 +76,8 @@
     font-weight: 700;
     min-width: 10.875rem;
     margin: 0;
-    color: #1a1a1a;
+    border-radius: 12px;
+    color: #ffffff;
     padding: 0 1.5rem;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
@@ -743,14 +746,15 @@
     justify-content: flex-end;
     align-items: center;
     gap: 1.5rem;
+    font-size: 36px;
   }
   #cs-navigation .cs-toggle {
     display: none;
   }
   #cs-navigation .cs-logo {
-    width: 18.4%;
+    width: 38.4%;
     max-width: 21.875rem;
-    height: 100%;
+    height: 150px;
     /* margin-right auto pushes everything away from it to the right */
     margin: 0 auto 0 0;
     padding: 0;
@@ -758,12 +762,17 @@
     justify-content: center;
     align-items: center;
     z-index: 100;
+    transition: width 0.3s;
   }
   #cs-navigation .cs-logo img {
     width: 100%;
     height: 100%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
+  }
+  #cs-navigation .cs-logo.larger {
+    width: 18.4%;
+    height: 100%;
   }
   #cs-navigation .cs-ul {
     width: 100%;
@@ -783,13 +792,14 @@
   }
   #cs-navigation .cs-li-link {
     /* 14px - 16px */
-    font-size: clamp(0.875rem, 1vw, 1rem);
+    font-size: clamp(1.875rem, 1vw, 1rem);
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;
     color: var(--bodyTextColor);
     display: block;
     position: relative;
+    transition: font-size 0.3s;
   }
   #cs-navigation .cs-li-link:hover:before {
     width: 100%;
@@ -809,6 +819,9 @@
     bottom: 0rem;
     left: 0;
     transition: width 0.3s;
+  }
+  #cs-navigation .cs-li-link.larger {
+    font-size: clamp(0.875rem, 1vw, 1rem);
   }
 }
 /* Dark Mode */
@@ -845,7 +858,7 @@
     margin: auto;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     gap: 1rem;
   }
@@ -894,7 +907,7 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
   #banner-712 .cs-background:before {
-    opacity: 1;
+    opacity: 0.7;
     background: linear-gradient(90.01deg, rgba(0, 0, 0, 0.9) 16.86%, rgba(0, 0, 0, 0) 100%);
   }
 }
@@ -952,6 +965,7 @@
     z-index: -1;
     transform: translateX(-50%);
   }
+  #cta-1394 .cs-topper,
   #cta-1394 .cs-title,
   #cta-1394 .cs-text {
     max-width: 31.25rem;
@@ -1154,12 +1168,20 @@
     padding-top: 0.1875rem;
   }
   #footer .credit {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     font-size: 1rem;
     line-height: 2.25rem;
-    text-align: center;
-    width: 96%;
+    width: 100%;
+    max-width: 84.375rem;
     margin: auto;
-    margin-top: 3.125rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: #fff;
+  }
+  #footer .credit p {
     color: #fff;
   }
   #footer .credit a {
@@ -1173,6 +1195,11 @@
   #footer .credit .copyright {
     font-size: 1rem;
     display: block;
+  }
+  #footer .credit .disclaimer {
+    text-align: left;
+    font-size: 12px;
+    color: #a0a0a0;
   }
 }
 /* Small Desktop */
@@ -1241,9 +1268,6 @@
   }
   #footer .right-section .buttons {
     justify-content: flex-start;
-  }
-  #footer .credit .copyright {
-    display: inline-block;
   }
 }
 /* Dark Mode */

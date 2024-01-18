@@ -5,7 +5,7 @@ preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'contact/'
 eleventyNavigation:
     key: Contact
-    order: 400
+    order: 300
 ---
 
 {% extends "layouts/base.html" %}
@@ -27,10 +27,10 @@ eleventyNavigation:
     <!--Background Image-->
     <picture class="cs-background">
         <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg">
+        <source media="(max-width: 600px)" srcset="/assets/images/index/flowers.jpg">
         <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg">
-        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg" alt="pills" width="1280" height="568" aria-hidden="true">
+        <source media="(min-width: 601px)" srcset="/assets/images/index/flowers.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/index/flowers.jpg" alt="pills" width="1280" height="568" aria-hidden="true">
     </picture>
 </div>
 
@@ -45,25 +45,25 @@ eleventyNavigation:
 <section id="contact-718">
     <div class="cs-container">
         <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fruuner1-m.jpg">
-            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Frunner1.jpg">
-            <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Frunner1.jpg" alt="runner" width="610" height="425" aria-hidden="true">
+            <source media="(max-width: 600px)" srcset="/assets/images/contact.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/contact.jpg">
+            <img decoding="async" src="/assets/images/contact.jpg" alt="runner" width="610" height="425" aria-hidden="true">
         </picture>
         <div class="cs-content">
             <span class="cs-topper">Contact Me</span>
             <h2 class="cs-title">Get in Touch</h2>
             <p class="cs-text">
-                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. 
+                Questions? Comments? I'd love to hear from you. Simply fill out the form below and I'll be in touch. 
             </p>
             <!--Form-->
-            <form class="cs-form" id="cs-form-718" name="Contact Form" method="post">
+            <form class="cs-form" id="cs-form-718" name="Contact Form" method="post" autocomplete="on" data-netlify="true">
                 <label class="cs-label">
                     Name
-                    <input class="cs-input" required type="text" id="name-718" name="name" placeholder="Name">
+                    <input class="cs-input" required type="text"  id="name-718" name="name" placeholder="Name" >
                 </label>
                 <label class="cs-label cs-email">
                     Email
-                    <input class="cs-input" required type="text" id="email-718" name="email" placeholder="Email">
+                    <input class="cs-input" required type="email" id="email-718" name="email" placeholder="Email" >
                 </label>
                 {# <label class="cs-label cs-phone">
                     Phone
@@ -71,12 +71,15 @@ eleventyNavigation:
                 </label> #}
                 <label class="cs-label">
                     Message
-                    <textarea class="cs-input cs-textarea" required name="Message" id="message-718" placeholder="Write message..."></textarea>
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-718" placeholder="Write message..." ></textarea>
                 </label>
-                <button class="cs-button-solid cs-submit" type="submit">Make an Appointment</button>
+                <button class="cs-button-solid cs-submit" type="submit">Submit</button>
             </form>
         </div>
     </div>
 </section>
+
+
+    {% include 'components/cta.html' %}
                                 
 {% endblock %}
