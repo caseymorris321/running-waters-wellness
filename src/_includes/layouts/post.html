@@ -50,7 +50,7 @@ eleventyComputed:
                         <!--Author Image-->
                         <picture class="blog-author-img">
                             <img
-                            src="/assets/svgs/profile.svg"
+                            src="/assets/images/blog/profile.png"
                             alt="house"
                             width="32"
                             height="32"
@@ -59,7 +59,7 @@ eleventyComputed:
                         <span class="blog-author">{{ author }}</span>
                         <span aria-hidden="true" class="blog-dot"></span>
                         <!--Blog Date-->
-                        <span class="blog-date">{{ date | postDate }}</span>
+                        <span class="blog-date">{{ page.date | postDate }}</span>
                     </div>
                 </div>
                 <section id="blog-content">
